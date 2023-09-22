@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #201a28;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.controller.LoginController">
+   <Text fill="#edf9ff" layoutX="255.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chat" textAlignment="CENTER">
+      <font>
+         <Font name="Arial Bold" size="36.0" />
+      </font>
+   </Text>
+   <TextField fx:id="nameInput" layoutX="189.0" layoutY="160.0" prefHeight="40.0" prefWidth="221.0" promptText="Enter NickName" />
+   <TextField fx:id="portInput" layoutX="189.0" layoutY="227.0" prefHeight="40.0" prefWidth="221.0" promptText="Enter Port" />
+   <Button fx:id="loginButton" defaultButton="true" layoutX="255.0" layoutY="306.0" mnemonicParsing="false" onAction="#buttonClicked" prefHeight="26.0" prefWidth="89.0" style="-fx-background-color: #2a2431;" text="Login" textFill="#d0d6db">
+      <font>
+         <Font name="Arial Bold" size="13.0" />
+      </font>
+   </Button>
+   <Text fx:id="warningText" fill="#fab2e0" layoutX="190.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You need enter nickname and port " textAlignment="CENTER" visible="false">
+      <font>
+         <Font name="Arial" size="14.0" />
+      </font>
+   </Text>
+</AnchorPane>

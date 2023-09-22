@@ -1,0 +1,35 @@
+plugins {
+    id 'scala'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+
+application {
+    mainClass = 'com.example.Main'
+}
+def versions = [
+        ScalaBinary: "2.13"
+]
+
+javafx {
+    version = '17.0.2'
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
+dependencies {
+    implementation 'org.scala-lang:scala-library:2.13.10'
+    implementation platform("com.typesafe.akka:akka-bom_${versions.ScalaBinary}:2.8.4")
+    implementation "com.typesafe.akka:akka-cluster-tools_${versions.ScalaBinary}"
+    implementation "com.typesafe.akka:akka-serialization-jackson_${versions.ScalaBinary}"
+    implementation "com.typesafe.akka:akka-actor-typed_${versions.ScalaBinary}"
+    implementation "com.typesafe.akka:akka-cluster-typed_${versions.ScalaBinary}"
+    implementation 'ch.qos.logback:logback-classic:1.2.11'
+}
